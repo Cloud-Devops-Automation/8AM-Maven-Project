@@ -8,7 +8,7 @@ pipeline{
 		stage ('checkout')
 		{
 			steps{
-				git branch: 'main', url: https://github.com/Cloud-Devops-Automation/8AM-Maven-Project.git
+				git branch: 'main', url:' https://github.com/Cloud-Devops-Automation/8AM-Maven-Project.git'
 			}
 		}
 
