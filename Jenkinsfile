@@ -19,10 +19,11 @@ pipeline{
 
 		}
 		stage('Build Docker Image'){
+			steps{
 			sh 'docker build -t coloud-web-app:latest .'
 			sh 'docker tag coloud-web-app thanish/coloud-web-app:latest'
 		}
-
+}
 		stage('Pushing the image to Docker Hub'){
 			steps{
 				withDockerRegistry([credentialsId:"dockerHub",url: " "])
