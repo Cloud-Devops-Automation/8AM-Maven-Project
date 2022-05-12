@@ -34,7 +34,7 @@ pipeline{
 }
 		stage('create the Container'){
 			steps{
-				sh "docker run -d -p 8005:8080 thanish/coloud-web-app:latest /bin/bash "
+				sh 'docker run -d -p 8005:8080 thanish/coloud-web-app:latest /bin/bash'
 			}
 		}
 		
