@@ -30,6 +30,7 @@ pipeline{
 					sh 'docker push thanish/coloud-web-app:latest'
 				}
 			}
+}
 		stage('create the Container'){
 			steps{
 				sh "docker run -itd -p 8005:8080 --name test-container thanish/coloud-web-app:latest /bin/bash "
